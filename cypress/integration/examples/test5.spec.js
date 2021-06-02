@@ -4,8 +4,10 @@ context('My Fifth Test Suite', () => {
   it('should be my fifth test', () => {
     cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
 
+    // Handling Web Tables With Cypress Usinh Each Command
     cy.get('tr td:nth-child(2)').each(($el, index, $list) => {
       const textValue = $el.text();
+
       if (textValue.includes('Python')) {
         cy.get('tr td:nth-child(2)')
           .eq(index)
