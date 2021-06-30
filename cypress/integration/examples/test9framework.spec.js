@@ -29,6 +29,13 @@ context('My Nineth Test Suite Using Framework', () => {
       '2'
     );
 
+    // Verifies if inline radio is disabled
     cy.get('#inlineRadio3').should('be.disabled');
+
+    // Clicks on the shop link
+    cy.get(':nth-child(2) > .nav-link').click();
+
+    // Checks the card titles and add the one with Blackberry to the cart using the cypress command that is on support commands
+    cy.selectProduct('Blackberry');
   });
 });
