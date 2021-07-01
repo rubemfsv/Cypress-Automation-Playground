@@ -16,6 +16,7 @@ context('My Nineth Test Suite Using Framework', () => {
   it('should be my nineth test', () => {
     const homePage = new HomePage();
     const productsPage = new ProductsPage();
+    var sum = 0;
 
     cy.visit('https://rahulshettyacademy.com/angularpractice/');
     homePage.getEditBox().type(test_data.name);
@@ -44,6 +45,24 @@ context('My Nineth Test Suite Using Framework', () => {
     });
     productsPage.checkoutButton().click();
 
+    // Get the sum of two values
+    cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
+      var current_text = $el.text();
+      var res = current_text.split(' ');
+      res = res[1].trim();
+
+      sum = Number(sum) + Number(res);
+    });
+
+    // Verify the sum of two values
+    cy.get('h3 strong').then((element) => {
+      var current_text = element.text();
+      var res = current_text.split(' ');
+      var total = Number(res[1].trim());
+
+      expect(total).to.equal(sum);
+    });
+
     cy.contains('Checkout').click();
     cy.get('#country').type('India');
 
@@ -52,7 +71,7 @@ context('My Nineth Test Suite Using Framework', () => {
     cy.get('input[type="submit"]').click();
 
     cy.get('.alert').then((element) => {
-      const current_text = element.text();
+      var current_text = element.text();
 
       expect(current_text.includes('Success')).to.be.true;
     });
