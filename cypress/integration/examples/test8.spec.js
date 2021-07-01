@@ -4,7 +4,7 @@ import 'cypress-iframe';
 
 context('My Eighth Test Suite', () => {
   it('should be my eighth test', () => {
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+    cy.visit(Cypress.env('url') + '/AutomationPractice/');
 
     // Handle iFrame loading frame
     cy.frameLoaded('#courses-iframe');

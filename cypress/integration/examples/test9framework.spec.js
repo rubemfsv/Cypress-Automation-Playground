@@ -18,7 +18,7 @@ context('My Nineth Test Suite Using Framework', () => {
     const productsPage = new ProductsPage();
     var sum = 0;
 
-    cy.visit('https://rahulshettyacademy.com/angularpractice/');
+    cy.visit(Cypress.env('url') + '/angularpractice/');
     homePage.getEditBox().type(test_data.name);
     homePage.getGender().select(test_data.gender);
 

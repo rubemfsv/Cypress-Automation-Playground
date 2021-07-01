@@ -2,7 +2,7 @@
 
 context('My Third Test Suite', () => {
   it('should be my third test', () => {
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+    cy.visit(Cypress.env('url') + '/AutomationPractice/');
 
     // Checkbox
     cy.get('#checkBoxOption1')

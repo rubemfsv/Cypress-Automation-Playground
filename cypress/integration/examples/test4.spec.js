@@ -2,7 +2,7 @@
 
 context('My Fourth Test Suite', () => {
   it('should be my fourth test', () => {
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+    cy.visit(Cypress.env('url') + '/AutomationPractice/');
 
     // Handle alerts
     cy.get('#alertbtn').click();

@@ -2,7 +2,7 @@
 
 context('My Seventh Test Suite', () => {
   it('should be my seventh test', () => {
-    cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+    cy.visit(Cypress.env('url') + '/AutomationPractice/');
 
     // Handling child window
     cy.get('#opentab').then((el) => {
