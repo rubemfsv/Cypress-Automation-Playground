@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import HomePage from '../pageObjects/HomePage';
-import ProductsPage from '../pageObjects/ProductsPage';
+import HomePage from '../../support/pageObjects/HomePage';
+import ProductsPage from '../../support/pageObjects/ProductsPage';
 
 import 'cypress-iframe';
 
