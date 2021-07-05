@@ -2,5 +2,7 @@
   "defaultCommandTimeout": 6000,
   "env": {
     "url": "https://rahulshettyacademy.com"
-  }
+  },
+  "projectId": "2ktufw",
+  "reporter": "mochawesome"
 }
