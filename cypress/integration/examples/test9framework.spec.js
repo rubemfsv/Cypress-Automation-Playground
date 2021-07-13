@@ -2,8 +2,6 @@
 import HomePage from '../../support/pageObjects/HomePage';
 import ProductsPage from '../../support/pageObjects/ProductsPage';
 
-import 'cypress-iframe';
-
 context('My Nineth Test Suite Using Framework', () => {
   var test_data;
   before(() => {
