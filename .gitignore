@@ -3,3 +3,4 @@
 /cypress/screenshots
 /cypress/cucumber-json
 /reports
+/mochawesome-report
