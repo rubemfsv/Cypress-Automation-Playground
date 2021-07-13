@@ -8,7 +8,18 @@
     "headTest": "npm run test -- --headed",
     "mochawesome": "npm run test -- --reporter mochawesome --spec cypress/integration/examples/test9framework.spec.js",
     "chromeTest": "npm run test -- --browser chrome --parallel",
-    "recordDashboardTest": "npm run test -- --record --key ad5ad744-fa9a-4a96-8d83-08705bd0d131 --reporter mochawesome"
+    "recordDashboardTest": "npm run test -- --record --key ad5ad744-fa9a-4a96-8d83-08705bd0d131 --reporter mochawesome",
+    "cucumberReport": "node cypress/cucumber-html-report.js"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/integration/examples/BDD",
+    "commonPath": "cypress/integration/examples/BDD/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +28,7 @@
     "cypress-cucumber-preprocessor": "^4.1.3",
     "cypress-iframe": "^1.0.1",
     "mocha": "^9.0.2",
-    "mochawesome": "^6.2.2"
+    "mochawesome": "^6.2.2",
+    "multiple-cucumber-html-reporter": "^1.18.0"
   }
 }
